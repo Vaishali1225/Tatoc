@@ -75,17 +75,5 @@ driver.switchTo().window(parentWindowHandler);
 Thread.sleep(1000);
 driver.findElement(By.linkText("Proceed")).click();
 
-driver.findElement(By.linkText("Generate Token")).click();
-String token=driver.findElement(By.id("token")).getText();
-
-String []ss=token.split("\\s+");
-
-Cookie name=new Cookie("mycookie",ss[1]);
-driver.manage().addCookie(name);
-
-driver.findElement(By.linkText("Proceed")).click();
-Thread.sleep(3000);
-//driver.quit();
-
 } 
 }
